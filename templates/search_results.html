@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Search Results - WebTest</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <h2>🔍 Search Results</h2>
+        <p id="search-result">Search result for: <strong>{{ query }}</strong></p>
+
+        <div class="results">
+            <div class="result-item">
+                <h4>Result 1</h4>
+                <p>This is a sample search result for "{{ query }}"</p>
+            </div>
+            <div class="result-item">
+                <h4>Result 2</h4>
+                <p>Another result matching your search query.</p>
+            </div>
+        </div>
+
+        <a href="/search"><button>🔙 New Search</button></a>
+        <a href="/"><button>🏠 Home</button></a>
+    </div>
+</body>
+
+</html>

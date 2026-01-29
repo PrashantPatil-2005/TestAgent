@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard - WebTest</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h2>🎉 Welcome to Dashboard!</h2>
+        <p id="welcome-message">Logged in as <strong>{{ username }}</strong></p>
+        
+        <div class="dashboard-content">
+            <p>You have successfully logged in to the application.</p>
+            
+            <div class="stats">
+                <div class="stat-card">
+                    <h3>📊 Overview</h3>
+                    <p>Your dashboard is ready.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="actions">
+            <a href="/"><button>🏠 Home</button></a>
+            <a href="/logout"><button class="logout-btn">🚪 Logout</button></a>
+        </div>
+    </div>
+</body>
+</html>

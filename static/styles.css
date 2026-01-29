@@ -1,51 +1,210 @@
+/* WebTest Demo App Styles */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-    background: #f4f4f7;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    margin: 0;
+    padding: 20px;
+    color: #ffffff;
 }
 
 .container {
-    background: rgba(255, 255, 255, 0.75);
-    padding: 40px 50px;
-    border-radius: 20px;
-    box-shadow: 0 25px 45px rgba(0,0,0,0.1);
-    backdrop-filter: blur(20px);
-    text-align: center;
-    width: 350px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 40px;
+    width: 100%;
+    max-width: 500px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
 }
 
 h2 {
-    font-weight: 600;
-    margin-bottom: 25px;
-    color: #111;
+    color: #ffffff;
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+    text-align: center;
 }
 
-input {
-    width: 100%;
-    padding: 12px 15px;
-    margin: 12px 0;
-    border-radius: 12px;
-    border: 1px solid #d0d0d0;
-    background: #fff;
-    font-size: 16px;
+p {
+    color: #a0a0a0;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="search"] {
+    padding: 14px 18px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.05);
+    color: #ffffff;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+input:focus {
+    outline: none;
+    border-color: #00d4ff;
+    box-shadow: 0 0 0 3px rgba(0, 212, 255, 0.1);
+}
+
+input::placeholder {
+    color: #666;
 }
 
 button {
-    width: 100%;
-    padding: 12px;
-    margin-top: 15px;
-    background: #0071e3;
+    padding: 14px 28px;
+    background: linear-gradient(90deg, #00d4ff, #7c3aed);
     color: white;
     border: none;
-    border-radius: 12px;
+    border-radius: 8px;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    margin: 5px;
 }
 
 button:hover {
-    background: #005bbf;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(124, 58, 237, 0.4);
+}
+
+.logout-btn {
+    background: linear-gradient(90deg, #ff6b6b, #ee5a5a);
+}
+
+.logout-btn:hover {
+    box-shadow: 0 4px 15px rgba(238, 90, 90, 0.4);
+}
+
+a {
+    text-decoration: none;
+    display: inline-block;
+}
+
+.dashboard-content {
+    margin: 20px 0;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 8px;
+}
+
+.stats {
+    display: grid;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.stat-card {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 15px;
+    border-radius: 8px;
+    border-left: 3px solid #00d4ff;
+}
+
+.stat-card h3 {
+    color: #00d4ff;
+    font-size: 1rem;
+    margin-bottom: 5px;
+}
+
+.results {
+    margin: 20px 0;
+}
+
+.result-item {
+    background: rgba(255, 255, 255, 0.03);
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    border-left: 3px solid #7c3aed;
+}
+
+.result-item h4 {
+    color: #7c3aed;
+    margin-bottom: 5px;
+}
+
+.summary {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 20px;
+    border-radius: 8px;
+    margin: 20px 0;
+}
+
+.summary h3 {
+    color: #00d4ff;
+    margin-bottom: 15px;
+}
+
+.actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+/* Step indicator */
+.step-indicator {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.step {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 10px;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.step.active {
+    background: linear-gradient(90deg, #00d4ff, #7c3aed);
+    color: white;
+}
+
+.step.completed {
+    background: #00d4ff;
+    color: white;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .container {
+        padding: 25px;
+    }
+    
+    h2 {
+        font-size: 1.4rem;
+    }
+    
+    button {
+        width: 100%;
+    }
 }

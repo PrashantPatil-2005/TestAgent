@@ -1,16 +1,31 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <title>Step 1</title>
+    <title>Multi-step Form - Step 1</title>
     <link rel="stylesheet" href="/static/styles.css">
 </head>
+
 <body>
     <div class="container">
-        <h2>Step 1</h2>
+        <div class="step-indicator">
+            <span class="step active">1</span>
+            <span class="step">2</span>
+            <span class="step">3</span>
+        </div>
+
+        <h2>📝 Step 1: Personal Info</h2>
+        <p>Please enter your name to continue.</p>
+
         <form method="POST">
-            <input type="text" name="info" placeholder="Enter info..." required>
-            <button type="submit">Next</button>
+            <input type="text" name="name" placeholder="Your Name" required>
+            <button type="submit">Next →</button>
         </form>
+
+        <div class="actions">
+            <a href="/"><button type="button">🏠 Home</button></a>
+        </div>
     </div>
 </body>
+
 </html>

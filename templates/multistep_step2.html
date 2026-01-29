@@ -1,13 +1,31 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <title>Step 2</title>
+    <title>Multi-step Form - Step 2</title>
     <link rel="stylesheet" href="/static/styles.css">
 </head>
+
 <body>
     <div class="container">
-        <h2>Completed 🎉</h2>
-        <p>Your form is finished.</p>
+        <div class="step-indicator">
+            <span class="step completed">✓</span>
+            <span class="step active">2</span>
+            <span class="step">3</span>
+        </div>
+
+        <h2>📧 Step 2: Contact Info</h2>
+        <p>Please enter your email address.</p>
+
+        <form method="POST">
+            <input type="email" name="email" placeholder="Your Email" required>
+            <button type="submit">Next →</button>
+        </form>
+
+        <div class="actions">
+            <a href="/form-step-1"><button type="button">← Back</button></a>
+        </div>
     </div>
 </body>
+
 </html>
